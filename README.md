@@ -192,4 +192,4 @@ docs/
 
 ## License
 
-MIT © [Rabin R — Zellvora Technologies](https://rabinr.in)
+MIT © [Rabin R — Zellvora Solutions](https://rabinr.in)

@@ -1,7 +1,7 @@
 /**
  * AUTO-GENERATED — do not edit by hand.
  * Run `npm run sync` to regenerate from src/assets/svg/.
- * Generated: 2026-06-26T20:59:39.620Z
+ * Generated: 2026-06-26T21:41:26.683Z
  */
 
 export type IconName =
