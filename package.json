@@ -1,8 +1,14 @@
 {
   "name": "@zellvora/icons",
-   "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zellvora Technologies — production-ready SVG icon library with auto-sync build pipeline",
-  "keywords": ["icons", "svg", "angular", "react", "zellvora"],
+  "keywords": [
+    "icons",
+    "svg",
+    "angular",
+    "react",
+    "zellvora"
+  ],
   "author": "Rabin R <suriyarabin@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
@@ -23,7 +29,10 @@
       "types": "./dist/react/index.d.ts"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "sync": "node scripts/sync-icons.js",
     "build": "npm run sync && npm run build:core && npm run build:types",
@@ -44,7 +53,11 @@
     "react": ">=17.0.0"
   },
   "peerDependenciesMeta": {
-    "@angular/core": { "optional": true },
-    "react": { "optional": true }
+    "@angular/core": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
   }
 }
