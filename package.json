@@ -1,0 +1,50 @@
+{
+  "name": "@zellvora/icons",
+  "version": "1.0.0",
+  "description": "Zellvora Technologies — production-ready SVG icon library with auto-sync build pipeline",
+  "keywords": ["icons", "svg", "angular", "react", "zellvora"],
+  "author": "Rabin R <suriyarabin@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./angular": {
+      "import": "./dist/angular/index.js",
+      "types": "./dist/angular/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/index.js",
+      "types": "./dist/react/index.d.ts"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "sync": "node scripts/sync-icons.js",
+    "build": "npm run sync && npm run build:core && npm run build:types",
+    "build:core": "node scripts/build.js",
+    "build:types": "node scripts/build-types.js",
+    "dev": "node scripts/watch.js",
+    "validate": "node scripts/validate-icons.js",
+    "preview": "node scripts/preview.js",
+    "release": "npm run build && npm publish --access public"
+  },
+  "devDependencies": {
+    "chokidar": "^3.6.0",
+    "fast-glob": "^3.3.2",
+    "svgo": "^3.2.0"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=13.0.0",
+    "react": ">=17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/core": { "optional": true },
+    "react": { "optional": true }
+  }
+}
